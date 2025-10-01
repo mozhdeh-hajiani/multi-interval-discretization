@@ -5,8 +5,7 @@ This repository contains an implementation of the **Minimum Description Length (
 
 The work is based on:
 
-*  *Fayyad, U. M., & Irani, K. B. (1993). Multi-Interval Discretization of Continuous-Valued Attributes for Classification Learning.*
-*  *Machine Learning Homework #3 (Spring 2013)*: MDL discretization & decision tree, assigned by Dr. Sattar Hashemi
+*  *Fayyad, U. M., & Irani, K. B. (1993). Multi-Interval Discretization of Continuous-Valued Attributes for Classification Learning.
 
 ---
 
