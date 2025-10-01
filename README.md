@@ -42,6 +42,4 @@ The work is based on:
 * Tom Mitchell. *Machine Learning*. McGraw Hill, 1997.
 * UCI Machine Learning Repository.
 
----
 
-Would you like me to also **add a ready-to-use table template** for the results (train/test accuracy, precision, recall, F1 per dataset) in the README, so you can just fill in your values?
