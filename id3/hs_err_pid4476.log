@@ -1,0 +1,147 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6d7002ef, pid=4476, tid=3632
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_11-b03 mixed mode)
+# Problematic frame:
+# V  [jvm.dll+0xc02ef]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x015ea4b0):  VMThread [id=3632]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000000
+
+Registers:
+EAX=0x00000000, EBX=0xffffffff, ECX=0x015e9dc8, EDX=0x015ea9a0
+ESP=0x0b6afbd8, EBP=0x0b6afc34, ESI=0x0b7cf8d8, EDI=0x015ea4b0
+EIP=0x6d7002ef, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x0b6afbd8)
+0x0b6afbd8:   00000000 0b7cf8d8 015ff790 0c00c720
+0x0b6afbe8:   0000000f 015ea4b0 015e9dc8 015ea958
+0x0b6afbf8:   015ea964 015ead4c 0b6afce0 015ea8e0
+0x0b6afc08:   015d75b8 015ea558 015ea560 015ea94c
+0x0b6afc18:   0c2ba9c0 015ff790 015ff7a8 0b6afc6c
+0x0b6afc28:   07623eb8 07623798 00000000 0b6afc6c
+0x0b6afc38:   6d7003e0 6d714235 6d70048e 00217130
+0x0b6afc48:   0b7cf894 6d700419 0b7cf8d8 6d76a230 
+
+Instructions: (pc=0x6d7002ef)
+0x6d7002df:   ff 85 c0 0f 84 d8 00 00 00 53 8b 40 04 89 45 fc
+0x6d7002ef:   8b 18 4b 0f 88 b7 00 00 00 eb 03 8b 45 fc 8b 40 
+
+
+Stack: [0x0b670000,0x0b6b0000),  sp=0x0b6afbd8,  free space=254k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0xc02ef]
+V  [jvm.dll+0xc03e0]
+V  [jvm.dll+0x129cfe]
+V  [jvm.dll+0x129ea7]
+V  [jvm.dll+0x129c0c]
+C  [msvcrt.dll+0x11287]
+C  [msvcrt.dll+0x11328]
+C  [kernel32.dll+0x51174]
+C  [ntdll.dll+0x5b495]
+C  [ntdll.dll+0x5b468]
+
+VM_Operation (0x0b7cf894): change breakpoints, mode: safepoint, requested by thread 0x015fba10
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x01611178 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=4540]
+  0x01607fa8 JavaThread "CompilerThread0" daemon [_thread_blocked, id=3496]
+  0x01606258 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5640]
+  0x01603e98 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=4872]
+  0x01603500 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=3156]
+  0x015fba10 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=2624]
+  0x015f0a88 JavaThread "Finalizer" daemon [_thread_blocked, id=216]
+  0x015ee4b0 JavaThread "Reference Handler" daemon [_thread_blocked, id=6340]
+  0x00217160 JavaThread "main" [_thread_blocked, id=6776]
+
+Other Threads:
+=>0x015ea4b0 VMThread [id=3632]
+  0x01607ef8 WatcherThread [id=6948]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00217100/0x000000e4] Threads_lock - owner thread: 0x015ea4b0
+
+Heap
+ def new generation   total 576K, used 428K [0x03620000, 0x036c0000, 0x03b00000)
+  eden space 512K,  83% used [0x03620000, 0x0368b310, 0x036a0000)
+  from space 64K,   0% used [0x036b0000, 0x036b0000, 0x036c0000)
+  to   space 64K,   0% used [0x036a0000, 0x036a0000, 0x036b0000)
+ tenured generation   total 1408K, used 503K [0x03b00000, 0x03c60000, 0x07620000)
+   the space 1408K,  35% used [0x03b00000, 0x03b7ded8, 0x03b7e000, 0x03c60000)
+ compacting perm gen  total 8192K, used 2808K [0x07620000, 0x07e20000, 0x0b620000)
+   the space 8192K,  34% used [0x07620000, 0x078de190, 0x078de200, 0x07e20000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x0040d000 	C:\Program Files\MyEclipse 6.0\jre\bin\javaw.exe
+0x776f0000 - 0x7782c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x772a0000 - 0x77374000 	C:\Windows\system32\kernel32.dll
+0x759f0000 - 0x75a3a000 	C:\Windows\system32\KERNELBASE.dll
+0x75df0000 - 0x75e90000 	C:\Windows\system32\ADVAPI32.dll
+0x774a0000 - 0x7754c000 	C:\Windows\system32\msvcrt.dll
+0x77830000 - 0x77849000 	C:\Windows\SYSTEM32\sechost.dll
+0x75b80000 - 0x75c21000 	C:\Windows\system32\RPCRT4.dll
+0x76010000 - 0x760d9000 	C:\Windows\system32\USER32.dll
+0x763d0000 - 0x7641e000 	C:\Windows\system32\GDI32.dll
+0x77880000 - 0x7788a000 	C:\Windows\system32\LPK.dll
+0x76480000 - 0x7651d000 	C:\Windows\system32\USP10.dll
+0x75e90000 - 0x75eaf000 	C:\Windows\system32\IMM32.DLL
+0x76580000 - 0x7664c000 	C:\Windows\system32\MSCTF.dll
+0x6d640000 - 0x6d7dd000 	C:\Program Files\MyEclipse 6.0\jre\bin\client\jvm.dll
+0x73d80000 - 0x73db2000 	C:\Windows\system32\WINMM.dll
+0x757b0000 - 0x757fb000 	C:\Windows\system32\apphelp.dll
+0x6d290000 - 0x6d298000 	C:\Program Files\MyEclipse 6.0\jre\bin\hpi.dll
+0x763c0000 - 0x763c5000 	C:\Windows\system32\PSAPI.DLL
+0x6d390000 - 0x6d3c5000 	C:\Program Files\MyEclipse 6.0\jre\bin\jdwp.dll
+0x6d610000 - 0x6d61c000 	C:\Program Files\MyEclipse 6.0\jre\bin\verify.dll
+0x6d310000 - 0x6d32d000 	C:\Program Files\MyEclipse 6.0\jre\bin\java.dll
+0x6d630000 - 0x6d63f000 	C:\Program Files\MyEclipse 6.0\jre\bin\zip.dll
+0x6d220000 - 0x6d227000 	C:\Program Files\MyEclipse 6.0\jre\bin\dt_socket.dll
+0x77890000 - 0x778c5000 	C:\Windows\system32\WS2_32.dll
+0x75c40000 - 0x75c46000 	C:\Windows\system32\NSI.dll
+0x73c00000 - 0x73c10000 	C:\Windows\system32\NLAapi.dll
+0x752d0000 - 0x7530c000 	C:\Windows\System32\mswsock.dll
+0x75190000 - 0x751d4000 	C:\Windows\system32\DNSAPI.dll
+0x6c8e0000 - 0x6c8e8000 	C:\Windows\System32\winrnr.dll
+0x6c8d0000 - 0x6c8e0000 	C:\Windows\system32\napinsp.dll
+0x6c8b0000 - 0x6c8c2000 	C:\Windows\system32\pnrpnsp.dll
+0x73990000 - 0x739ac000 	C:\Windows\system32\IPHLPAPI.DLL
+0x73970000 - 0x73977000 	C:\Windows\system32\WINNSI.DLL
+0x734d0000 - 0x73508000 	C:\Windows\System32\fwpuclnt.dll
+0x6e960000 - 0x6e966000 	C:\Windows\system32\rasadhlp.dll
+0x74e00000 - 0x74e05000 	C:\Windows\System32\wshtcpip.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:48375
+java_command: pkg1.mdl
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;E:\MATLAB\bin;E:\MATLAB\bin\win32
+USERNAME=mozhdeh
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 23 Stepping 6, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7600 
+
+CPU:total 2 (cores per cpu 2, threads per core 1) family 6 model 7 stepping 6, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 2097151k(1133308k free), swap 4194303k(2491676k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_11-b03) for windows-x86, built on Dec 15 2006 01:16:12 by "java_re" with MS VC++ 6.0
+

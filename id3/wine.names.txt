@@ -1,0 +1,4 @@
+3
+1 2 3
+13
+Alcohol Malic-acid Ash Alcalinity  Magnesium Total-phenols Flavanoids Nonflavanoid-phenols Proanthocyanins Color-intensity Hue OD280 Proline       
